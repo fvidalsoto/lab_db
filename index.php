@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PetroFAI</title>
+    <link rel="stylesheet" href="plugins/sweetalert2/sweetalert2.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/estilos.min.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="container">
+            <h1 class="pt-5 text-white">Laboratorio de BD</h1>
+            <p class="pt-3">Inserción de 1.000.000 de tuplas</p>
+            <form action="" method="POST" id="form-insert">
+                <button type="submit" id="insertar" class="btn btn-primary" id="btn-submit">Insertar tuplas</button>
+            </form>
+
+            <div class="py-3">
+                <div class="sk-chase mr-4 spinner d-none">
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                    <div class="sk-chase-dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="./plugins/sweetalert2/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="./js/funciones.js"></script>
+</body>
+
+</html>
