@@ -1,27 +1,23 @@
 <?php
-require('./conexion.php');
+
+ini_set('max_execution_time', '6000');
+
+set_time_limit(6000);
 
 /* SCRIPT MySQL */
-$contador = 0;
-for ($i = 0; $i < 1000000; ++$i) {
+for ($i = 0; $i < 1000000; $i++) {
     $texto = 'Provincia-' . $i;
     $consulta = "INSERT INTO provincia (nombre) VALUES ('$texto')";
     $result =  $mysqli->query($consulta);
-    $contador++;
 }
 
-echo $contador;
+// echo $contador;
 
 /* SCRIPT PostgreSQL */
-/* 
-$contador = 0;
 
-for ($i = 0; $i < 1000000; ++$i) {
-    $texto = 'Provincia-' . $i;
-    $consulta = "INSERT INTO gestion_instalaciones.provincia (nombre) VALUES ('$texto');";
-    $result =  pg_query($consulta) or die('La consulta fallo: ' . pg_last_error());
-    $contador++;
-}
-
-echo $contador;
- */
+// for ($i = 0; $i < 1000000; $i++) {
+//     $texto = 'Provincia-' . $i;
+//     $consulta = "INSERT INTO gestion_instalaciones.provincia (nombre) VALUES ('$texto');";
+//     $result =  pg_query($consulta) or die('La consulta fallo: ' . pg_last_error());
+    
+// }
