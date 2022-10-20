@@ -8,7 +8,6 @@ if ($opcion == '1') {
     if ($mysqli->connect_error) {
         die('Error en la conexion' . $mysqli->connect_error);
     }
-    exit;
 
     $j = 0;
     for ($i = 0; $i < 1000000; ++$i) {
@@ -34,7 +33,6 @@ if ($opcion == '1') {
         echo "Error : Unable to open database\n";
         die('ERROR');
     }
-    exit;
 
     $j = 0;
     for ($i = 0; $i < 1000000; ++$i) {
