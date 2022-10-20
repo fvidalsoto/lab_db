@@ -16,20 +16,34 @@
         <div class="container">
             <h1 class="pt-5 text-white">Laboratorio de BD</h1>
             <p class="pt-3">Inserción de 1.000.000 de tuplas</p>
-            <form action="" method="POST" id="form-insert">
-                <button type="submit" id="insertar" class="btn btn-primary" id="btn-submit">Insertar tuplas</button>
-            </form>
+            <div class="row">
+                <div class="col-6">
+                    <form class="col-12 col-lg-6" action="" method="POST" id="form-insert">
+                        <div class="d-block">
+                            <select class="form-select" aria-label="" name="opcion" id="opcion">
+                                <option selected disabled>-- Seleccionar opción --</option>
+                                <option value="1">MySQL</option>
+                                <option value="2">PostgreSQL</option>
+                            </select>
+                        </div>
+                        <button type="submit" id="insertar" class="btn btn-primary" id="btn-submit">Insertar tuplas</button>
+                    </form>
+                    <div class="py-3">
+                        <div class="sk-chase mr-4 spinner d-none">
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                            <div class="sk-chase-dot"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6" id="cont_tiempo">
 
-            <div class="py-3">
-                <div class="sk-chase mr-4 spinner d-none">
-                    <div class="sk-chase-dot"></div>
-                    <div class="sk-chase-dot"></div>
-                    <div class="sk-chase-dot"></div>
-                    <div class="sk-chase-dot"></div>
-                    <div class="sk-chase-dot"></div>
-                    <div class="sk-chase-dot"></div>
                 </div>
             </div>
+
         </div>
     </div>
 
