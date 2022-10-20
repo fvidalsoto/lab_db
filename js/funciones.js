@@ -29,31 +29,20 @@ $('#form-insert').on('submit', function (e) {
       $('.spinner').removeClass('d-none');
     },
     success: function (resp) {
+      console.log(resp);
       end = Date.now();
-      console.log('Tiempo de ejecucion: ', (end - start) / 1000, ' segundos');
-      console.log(
-        'Tiempo de ejecucion: ',
-        (end - start) / 1000 / 60,
-        ' minutos'
-      );
+
       $('.spinner').addClass('d-none');
       $('#btn-submit').attr('disabled', false);
-      console.log('Exito-> ', resp, ' inserciones');
 
-      /* if (resp === '1') {
-        messageAlert(
-          '¡ÉXITO!',
-          'El datos del usuario fueron editados correctamente',
-          'success'
-        );
-      } else {
-        messageAlert(
-          '¡ERROR!',
-          'No se pudieron editar los datos del usuario, intente nuevamente más tarde',
-          'error'
-        );
-      } */
-      console.log('FINALIZÓ');
+      if (document.querySelector('.tiempo')) {
+        document.querySelector('.tiempo').remove();
+      }
+      const tiempo = document.createElement('p');
+      const minutos = ((end - start) / 1000 / 60).toFixed(2);
+      tiempo.textContent = 'Tiempo de ejecucion: ' + minutos + ' minutos';
+      tiempo.classList.add('tiempo');
+      document.querySelector('#cont_tiempo').appendChild(tiempo);
     },
     error: function () {},
   });

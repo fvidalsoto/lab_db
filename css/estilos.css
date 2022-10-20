@@ -154,10 +154,14 @@ p {
 body {
   background: linear-gradient(
       to bottom,
-      rgba(21, 21, 22, 0.52),
-      rgba(21, 21, 22, 0.52)
+      rgba(21, 21, 22, 0.8),
+      rgba(21, 21, 22, 0.8)
     ),
     url(../img/petroleo.jpg);
   background-size: cover;
   color: white;
+}
+
+.tiempo {
+  font-size: 1.5rem;
 }
