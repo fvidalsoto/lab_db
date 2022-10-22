@@ -8,7 +8,7 @@ set_time_limit(6000);
 
 /* SCRIPT MySQL */
 if ($opcion == '1') {
-    $mysqli = new mysqli('localhost', 'root', '', 'db_petrofai');
+    $mysqli = new mysqli('localhost', 'root', 'root', 'db_petrofai', '3307');
     $mysqli->set_charset('utf8');
     if ($mysqli->connect_error) {
         die('Error en la conexion' . $mysqli->connect_error);
@@ -18,14 +18,15 @@ if ($opcion == '1') {
 
     if ($opcion2 == '1') {
         for ($i = 0; $i < 1000000; ++$i) {
-            $nombre_actividad = "Actividad-" . $i;
+            $nombre_actividad = chr(rand(65, 90)) . chr(rand(65, 90)) . chr(rand(65, 90));
             $descripcion = "Descripcion-" . $i;
             $consulta = "INSERT INTO actividad (nombre, descripcion) VALUES ('$nombre_actividad','$descripcion')";
+            $result =  $mysqli->query($consulta);
         }
     } else {
         for ($i = 0; $i < 1000000; ++$i) {
-            $texto = 'Provincia-' . $i;
-            $consulta = "INSERT INTO provincia (nombre) VALUES ('$texto')";
+            $nombre = rand(0, 20) . chr(rand(65, 90));
+            $consulta = "INSERT INTO sistema_de_extraccion (nombre) VALUES ('$nombre')";
             $result =  $mysqli->query($consulta);
         }
     }
@@ -48,7 +49,7 @@ if ($opcion == '1') {
 
     if ($opcion2 == '1') {
         for ($i = 0; $i < 1000000; ++$i) {
-            $nombre_actividad = chr(rand(65, 90));
+            $nombre_actividad = chr(rand(65, 90)) . chr(rand(65, 90)) . chr(rand(65, 90));
             $descripcion = "Descripcion-" . $i;
             $consulta = "INSERT INTO gestion_empleados.actividad (nombre, descripcion) VALUES ('$nombre_actividad','$descripcion')";
             $result =  pg_query($consulta) or die('La consulta fallo: ' . pg_last_error());

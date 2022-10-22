@@ -18,14 +18,14 @@
             <p class="pt-3">Inserción de 1.000.000 de tuplas</p>
             <div class="row">
                 <div class="col-6">
-                    <form class="col-12 col-lg-6" action="" method="POST" id="form-insert">
+                    <form class="col-12 col-lg-8" action="" method="POST" id="form-insert">
                         <div class="d-block">
-                            <select class="form-select" aria-label="" name="opcion" id="opcion">
+                            <select class="form-select text-center" aria-label="" name="opcion" id="opcion">
                                 <option selected disabled value="0">-- Seleccionar SGBD --</option>
                                 <option value="1">MySQL</option>
                                 <option value="2">PostgreSQL</option>
                             </select>
-                            <select class="form-select mt-2" aria-label="" name="opcion2" id="opcion2">
+                            <select class="form-select mt-2 text-center" aria-label="" name="opcion2" id="opcion2">
                                 <option selected disabled value="0">-- Seleccionar tabla --</option>
                                 <option value="1">Actividad (Indice Arbol-B)</option>
                                 <option value="2">Sistema de Extraccion (Indice Hash)</option>
