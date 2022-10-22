@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PetroFAI</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- Estilos CSS -->
     <link rel="stylesheet" type="text/css" href="./css/estilos.min.css">
@@ -20,9 +21,14 @@
                     <form class="col-12 col-lg-6" action="" method="POST" id="form-insert">
                         <div class="d-block">
                             <select class="form-select" aria-label="" name="opcion" id="opcion">
-                                <option selected disabled>-- Seleccionar opción --</option>
+                                <option selected disabled value="0">-- Seleccionar SGBD --</option>
                                 <option value="1">MySQL</option>
                                 <option value="2">PostgreSQL</option>
+                            </select>
+                            <select class="form-select mt-2" aria-label="" name="opcion2" id="opcion2">
+                                <option selected disabled value="0">-- Seleccionar tabla --</option>
+                                <option value="1">Actividad (Indice Arbol-B)</option>
+                                <option value="2">Sistema de Extraccion (Indice Hash)</option>
                             </select>
                         </div>
                         <button type="submit" id="insertar" class="btn btn-primary" id="btn-submit">Insertar tuplas</button>
