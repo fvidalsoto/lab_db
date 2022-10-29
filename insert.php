@@ -17,12 +17,18 @@ if ($opcion == '1') {
     $j = 0;
 
     if ($opcion2 == '1') {
+        $consulta = "INSERT INTO actividad (nombre, descripcion) VALUES ";
         for ($i = 0; $i < 1000000; ++$i) {
             $nombre_actividad = chr(rand(65, 90)) . chr(rand(65, 90)) . chr(rand(65, 90));
             $descripcion = "Descripcion-" . $i;
-            $consulta = "INSERT INTO actividad (nombre, descripcion) VALUES ('$nombre_actividad','$descripcion')";
-            $result =  $mysqli->query($consulta);
+            $consulta .= "('$nombre_actividad', '$descripcion'), ";
         }
+        $consulta .= substr($consulta, 0, -1);
+        $consulta .= ';';
+
+        echo $consulta;
+
+        $result =  $mysqli->query($consulta);
     } else {
         for ($i = 0; $i < 1000000; ++$i) {
             $nombre = rand(0, 20) . chr(rand(65, 90));
